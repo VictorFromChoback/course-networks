@@ -21,6 +21,7 @@ services:
     command: tcpdump -i eth0 -w /data/eve.pcap
     volumes:
     - ./data:/data
+    - ./containers/eve/src:/src
     networks:
       attacknet:
         ipv4_address: 10.0.1.4
